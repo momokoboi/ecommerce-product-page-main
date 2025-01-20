@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+*, ul, a{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+:root{
+    /* primary */
+    --Orangehsl: hsl(26, 100%, 55%);
+    --Pale_orange: hsl(25, 100%, 94%);
+    /* neutral */
+    --Very_dark_blue: hsl(220, 13%, 13%);
+    --Dark_grayish_blue: hsl(219, 9%, 45%);
+    --Grayish_blue: hsl(220, 14%, 75%);
+    --Light_grayish_blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%); /*with 75% opacity for lightbox background */
+
+    --default_font: "Kumbh Sans", serif;
+}
+
+body{
+    font-family: var(--default_font);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--White);
+    height: 120px;
+}
+
+#header_leftitems{
+    display: flex;
+    align-items: center;
+}
+
+#header_leftitems img{
+    flex: none;
+    width: 250px;
+    height: 45px;
+
+    margin-left: clamp(10px, 5vw, 100px);
+    margin-right: clamp(10px, 5vw, 100px);
+}
+
+#header_leftitems > ul{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#header_leftitems ul, li{
+    height: 100%;
+    align-content: center;
+}
+
+#header_leftitems a{
+    color: var(--Dark_grayish_blue);
+    height: 100%;
+    position: relative;
+}
+
+#header_leftitems a::before{
+    content: "";
+    background-color: red;
+
+    width: 100%;
+    padding: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+
+}
+
+#header_rightitems{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+button{
+    all: unset;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#header_rightitems button{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#header_rightitems button > img{
+    aspect-ratio: 1;
+    width: 40px;
+    margin: auto;
+}
+
+#header_rightitems  a > img{
+    aspect-ratio: 1;
+    width: 70px;
+}
+
+main{
+    background-color: var(--Pale_orange);
+}
