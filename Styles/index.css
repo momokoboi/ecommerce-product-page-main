@@ -28,7 +28,7 @@
 
 body{
     font-family: var(--default_font);
-
+    overflow-x: hidden;
     position: relative;
 }
 

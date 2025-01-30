@@ -1,3 +1,16 @@
+
 main{
-    background-color: red;
+    flex-flow: column nowrap;
+    min-height: fit-content;
+}
+
+
+#backdrop_img{
+    display: none;
+}
+
+#product_info{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 200px;
 }
