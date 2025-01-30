@@ -6,12 +6,29 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+  <!-- css -->
   <link rel="stylesheet" href="Styles/index.css">
+  <!-- media queries -->
+   <link rel="stylesheet" href="Styles/tablet.css" media="screen and (maxwidth: 1400px)">
+  <!-- js -->
+   <script src="script.js" defer></script>
+
   
   <title>E-commerce product page</title>
 
 </head>
 <body>
+  <div id="backdrop">
+    <div id="cart">
+      <div id="title">
+        <h3>Cart</h3>
+      </div>
+      <ul id="cart_list">
+        <p>Car is Empty pls add items</p>
+      </ul>
+      <button id="checkout">Checkout</button>
+    </div>
+  </div>
   <header>
       <div id="header_leftitems">
         <img src="images/logo.svg" alt="sneakers_logo">
@@ -24,19 +41,20 @@
         </ul>
       </div>
       <div id="header_rightitems">
-        <button>
+        <button id="cart_EL">
           <img src="images/icon-cart.svg" alt="cart_icon">
         </button>
+        <span id="itemcount">0</span>
         <a href="#">
           <img src="images/image-avatar.png" alt="avatar_img">
         </a>
       </div>
   </header>
-  <main>
+  <main id="main">
     
-    <section id="product_display">
+    <section class="product_display">
       <div id="main_img">
-        <img src="images/image-product-1.jpg" alt="">
+        <img src="images/image-product-1.jpg" alt="product_1" id="show_product">
       </div>
       <div id="thumbnail_img">
         <ul>
@@ -58,15 +76,18 @@
     <section id="product_info">
       <h2>Sneaker Company</h2>
       <h1>Fall Limited Edition Sneakers</h1>
-      <p>
+      <p id="info_p">
         These low-profile sneakers are your perfect casual wear companion. Featuring a
         durable rubber outer sole, they’ll withstand everything the weather can offer.
       </p>
       <p id="price">$125.00</p>
-      <span id="discount">50%</span>
       <p id="old_price">$250.00</p>
-      <p id="product_quantity">0</p>
-      <button id="add_to_cart">Add to cart</button>
+      <div id="cart_div">
+        <p id="product_quantity">
+          <button id="minus">-</button><span id="number">0</span><button id="plus">+</button>
+        </p>
+        <button id="add_to_cart"> <img src="images/icon-cart.svg" alt="shopping_cart">Add to cart</button>
+      </div>
       
     </section>
   </main>
