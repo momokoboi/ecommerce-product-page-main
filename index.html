@@ -32,8 +32,10 @@
   </div>
   <header>
       <div id="header_leftitems">
+        <input type="checkbox" name="menu" id="imenu" checked>
+        <label for="imenu"><img src="images/icon-menu.svg" alt="menu_logo" id="menu_img"></label>
         <img src="images/logo.svg" alt="sneakers_logo">
-        <ul>
+        <ul id="menu_ul">
           <li><a href="#">Collections</a></li>
           <li><a href="#">Men</a></li>
           <li><a href="#">Women</a></li>
@@ -52,7 +54,10 @@
       </div>
   </header>
   <main id="main">
-    
+    <div id="buttons_mobile">
+      <button id="right_btn_m"><img src="images/icon-next.svg" alt="next_btn"></button>
+      <button id="left_btn_m"><img src="images/icon-previous.svg" alt="prev_btn"></button>
+    </div>
     <section class="product_display">
       <div id="main_img">
         <img src="images/image-product-1.jpg" alt="product_1" id="show_product">
@@ -81,8 +86,10 @@
         These low-profile sneakers are your perfect casual wear companion. Featuring a
         durable rubber outer sole, they’ll withstand everything the weather can offer.
       </p>
-      <p id="price">$125.00</p>
-      <p id="old_price">$250.00</p>
+      <div id="prices">
+        <p id="price">$125.00</p>
+        <p id="old_price">$250.00</p>
+      </div>
       <div id="cart_div">
         <p id="product_quantity">
           <button id="minus">-</button><span id="number">0</span><button id="plus">+</button>

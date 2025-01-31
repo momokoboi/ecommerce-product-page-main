@@ -156,6 +156,13 @@ button{
     outline: 3px solid var(--Orangehsl);
     border-radius: 50%;
 }
+input{
+    display: none;
+}
+
+label{
+    display: none;
+}
 
 main{
     background-color: var(--White);
@@ -337,6 +344,10 @@ main img{
     font-size: 16px;
     color: var(--Dark_grayish_blue);
     width: 50ch;
+}
+#prices{
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 #price{
@@ -533,4 +544,8 @@ main img{
     border-radius: 10px;
     font-weight: bold;
 
+}
+
+#buttons_mobile{
+    display: none;
 }

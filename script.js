@@ -1,6 +1,7 @@
 // global variables
 let indexmodal = 1 
 let cart_quantity = 0
+let index = 1
 
 
 // listen click on IMGs
@@ -82,7 +83,7 @@ function update_img(tobeupdated, index){
     const mainImg = document.getElementById("show_product")
     mainImg.setAttribute("src", `images/image-product-${index}.jpg`)
 
-    main.setAttribute("alt", `product_${index}`)
+    mainImg.setAttribute("alt", `product_${index}`)
 }
 
 // update modal img
@@ -93,7 +94,7 @@ function update_img_modal(tobeupdated, index){
   const mainImg = document.getElementById("show_product_m")
   mainImg.setAttribute("src", `images/image-product-${index}.jpg`)
 
-  main.setAttribute("alt", `product_${index}`)
+  mainImg.setAttribute("alt", `product_${index}`)
 }
 
 function updatebuttons_modul(direction){
@@ -324,14 +325,69 @@ function backdrop_MGI(){
       })
 
 }
+function mobile(){
+  const right_btn = document.getElementById("right_btn_m")
+  const left_btn = document.getElementById("left_btn_m")
 
+  right_btn.addEventListener("click", ()=>{
+    img_swap_mobile("right")
+  })
 
+  left_btn.addEventListener("click", ()=>{
+    img_swap_mobile("left")
+  })
+
+  
+}
+
+function img_swap_mobile(direction){
+  const thumb1 = document.getElementById("thumb_1")
+  const thumb2 = document.getElementById("thumb_2")
+  const thumb3 = document.getElementById("thumb_3")
+  const thumb4 = document.getElementById("thumb_4")
+
+  const ELarray = [thumb1, thumb2, thumb3, thumb4]
+  
+  if(direction === "right"){
+    index+=1
+  }else if(direction === "left" && index > 0){
+    index-=1
+  }
+
+  if(index === 2){
+    ELarray.forEach((value) => value.setAttribute("class", "thumb"))
+    update_img(thumb2, 2)
+  }else if(index === 3){
+    ELarray.forEach((value) => value.setAttribute("class", "thumb"))
+    update_img(thumb3, 3)
+    
+  }else if(index === 4){
+
+    ELarray.forEach((value) => value.setAttribute("class", "thumb"))
+    update_img(thumb4, 4)
+  }else if(direction === "right" && index > 4){
+    ELarray.forEach((value) => value.setAttribute("class", "thumb"))
+    index = 1
+    update_img(thumb1, 1)
+  }else if(direction === "left" && index === 1){
+    ELarray.forEach((value) => value.setAttribute("class", "thumb"))
+    index = 1
+    update_img(thumb1, 1)
+  }else if(direction === "left" && index === 0){
+    ELarray.forEach((value) => value.setAttribute("class", "thumb"))
+    index = 4
+    update_img(thumb4, 4)
+  }
+
+}
 
 function main(){
     IMG_updaters()
     update_counter()
     add_to_cart()
     show_cart()
+    
+    mobile()
 }
 
 

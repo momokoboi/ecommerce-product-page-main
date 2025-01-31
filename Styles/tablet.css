@@ -14,3 +14,11 @@ main{
     align-items: flex-start;
     margin-top: 200px;
 }
+
+input{
+    display: none;
+}
+
+label{
+    display: none;
+}
