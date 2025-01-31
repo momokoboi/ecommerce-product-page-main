@@ -386,7 +386,6 @@ function main(){
     update_counter()
     add_to_cart()
     show_cart()
-    
     mobile()
 }
 
